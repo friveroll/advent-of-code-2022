@@ -25,19 +25,17 @@ def test_parser(example):
     )
 
 
-def test_crate_mover_9000():
-    assert aoc.crate_mover_9000(
-        [["A"], ["B", "C"], ["D", "E", "F"]], 2, 2, 1
-    ) == [
+def test_move_stacks():
+    assert aoc.move_stacks([["A"], ["B", "C"], ["D", "E", "F"]], 2, 2, 1) == [
         ["C", "B", "A"],
         [],
         ["D", "E", "F"],
     ]
 
 
-def test_crate_mover_9001():
-    assert aoc.crate_mover_9001(
-        [["A"], ["B", "C"], ["D", "E", "F"]], 2, 2, 1
+def test_move_stacks():
+    assert aoc.move_stacks(
+        [["A"], ["B", "C"], ["D", "E", "F"]], 2, 2, 1, is_reversed=False
     ) == [
         ["B", "C", "A"],
         [],
